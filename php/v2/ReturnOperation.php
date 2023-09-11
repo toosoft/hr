@@ -8,9 +8,10 @@ class TsReturnOperation extends ReferencesOperation
     public const TYPE_CHANGE = 2;
 
     /**
+     * @returns array not void
      * @throws \Exception
      */
-    public function doOperation(): void
+    public function doOperation(): array
     {
         $data = (array)$this->getRequest('data');
         $resellerId = $data['resellerId'];
@@ -23,6 +24,7 @@ class TsReturnOperation extends ReferencesOperation
                 'message' => '',
             ],
         ];
+        $error = ''; // error variable needed to be initialized
 
         if (empty((int)$resellerId)) {
             $result['notificationClientBySms']['message'] = 'Empty resellerId';
