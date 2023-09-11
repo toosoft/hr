@@ -11,3 +11,8 @@ We expect you:
 * refactor the code of the ReturnOperation.php file to the best form in your opinion;
 * write in the comments a short summary of the code: the purpose of the code and its quality.
 
+#### Short Summary of the code
+This code is a fragment of an ecommerce site. It basically checks if a reseller credentials exist. If exists, It fetches
+the reseller credentials and emails a complaint from a client to the reseller. It also emails relevant responses to the
+site admin and the client.
+
